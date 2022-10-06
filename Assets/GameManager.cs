@@ -8,11 +8,14 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TMP_Text ScoreText;
 
     private int score;
-    public float timer;
-    private float scrollSpeed;
-    public float initialScrollSpeed = 8f;
 
     public static GameManager Instance { get; private set; }
+
+
+    public void ShowGameOverScreen()
+    {
+        GameOverScreen.SetActive(true);
+    }
 
 
     public void RestartScene()
